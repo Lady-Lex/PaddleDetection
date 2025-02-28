@@ -1,0 +1,62 @@
+mode: paddle
+draw_threshold: 0.5
+metric: VOC
+use_dynamic_shape: false
+arch: YOLO
+min_subgraph_size: 3
+Preprocess:
+- interp: 2
+  keep_ratio: false
+  target_size:
+  - 640
+  - 640
+  type: Resize
+- mean:
+  - 0.0
+  - 0.0
+  - 0.0
+  norm_type: none
+  std:
+  - 1.0
+  - 1.0
+  - 1.0
+  type: NormalizeImage
+- type: Permute
+label_list:
+- Russian_Blue
+- Birman
+- wheaten_terrier
+- scottish_terrier
+- shiba_inu
+- basset_hound
+- english_cocker_spaniel
+- Bengal
+- great_pyrenees
+- British_Shorthair
+- havanese
+- chihuahua
+- Maine_Coon
+- miniature_pinscher
+- Siamese
+- staffordshire_bull_terrier
+- japanese_chin
+- Persian
+- keeshond
+- saint_bernard
+- pug
+- leonberger
+- Abyssinian
+- newfoundland
+- pomeranian
+- american_bulldog
+- english_setter
+- yorkshire_terrier
+- Sphynx
+- Bombay
+- beagle
+- Ragdoll
+- american_pit_bull_terrier
+- german_shorthaired
+- Egyptian_Mau
+- boxer
+- samoyed
